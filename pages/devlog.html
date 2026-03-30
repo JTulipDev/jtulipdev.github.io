@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Justin Tulip</title>
+    <link rel="stylesheet" href="../styles/menu.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="icon" href="../images/OpenGL_Window_Icon.png">
+  </head>
+  <body>
+    <header class="header">
+      <a href="../index.html" class="logo">Justin Tulip</a>
+      <input class="menu-btn" type="checkbox" id="menu-btn">
+      <label class="menu-icon" for="menu-btn"><span class="nav-icon"></span></label>
+      <ul class="menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../pages/devlog.html" class="active">Dev Log</a></li>
+        <!--<li><a href="pages/contact.html">Contact</a></li> cut for now -->
+      </ul>
+    </header>
+    <main>
+        <h1>Dev Log</h1>
+        <section class="dev-post">
+          <div class="dev-post-content">
+            <h2>Initial Post</h2>
+            <picture>
+              <img src="../images/OpenGL_Window_Cropped.png" alt="OpenGL Triangle">
+            </picture>
+            <p>
+              This is the initial post in my developer log, and in it I will go over some of the existing work I've 
+              done to create a 3D renderer using OpenGL. Why a 3D renderer though? This seems like a daunting task 
+              for a developer that just completed their Associates degree. Coming up on my final semester I was 
+              faced with making a decision on what direction I wanted to take myself with the skills I learned in 
+              school. I got into programming in the first place because of gaming and my interest in interacting 
+              with computers, so I knew if I wanted to truly enjoy my profession I should aim in that direction. 
+              With my degree being largely based around .NET, I figured I'd start with Unity using C#. I looked into 
+              their developer certifications, completed a couple of the basic projects and wondered how everything 
+              truly worked under the hood. The visual aspect of a game engine is the renderer, so I pivoted to that 
+              as my starting point.
+            </p>
+            <p>
+              After a fair amount of research and reading developer threads about the best way to get started on 
+              rendering for a game engine, the most common answer was OpenGL. Specifically, LearnOpenGL was mentioned
+              quite a lot. I'm running Linux on my development machine at the moment, so compatibility was at 
+              the top of my priorities. LearnOpenGL follows development in a windows environment, and it seems a lot 
+              of the process is abstracted by Visual Studio. This would've been helpful if I were still using windows, 
+              but it provided a great learning opportunity on how to link dependencies and compile them all locally 
+              within the project. This makes it super portable and can be compiled on just about any OS with the help of CMake, 
+              though it's only for compiling GLFW and linking GLAD so I'll have to see how keeping everything local 
+              scales.
+            </p>
+            <p>
+              Once everything was linked correctly and I could figure out and see how CMakeLists.txt files work, I 
+              was ready for the first task: getting a window to open. This part was fairly straightforward, any minor 
+              hiccups I had were all syntax related and going back and fixing how my CMakeLists files were written. 
+              I've never programmed in C++ prior to this, so I kind of expected that experience. At this stage, LearnOpenGL also 
+              covered some basic input handling, which was mapped to the escape key to close the window. I can see 
+              how this can be expanded for other forms of input, but for now that was out of scope since I had 
+              nothing on the screen.
+            </p>
+            <p>
+              Now came the fun part: rendering a triangle. Well, at least I thought it would be fun. In the 
+              beginning it was fairly straightforward, I got the triangle to render no problem. I think what slowed me 
+              down a bit here was actually understanding how OpenGL was using the data. That part is more or less 
+              abstract, but after playing around with it and gathering additional information about how OpenGL uses 
+              Vertex Buffer Objects and Vertex Array Objects, I got the gist. At this point I was happy with the process 
+              and what I built. I got <em>something</em> to render and it was looking promising!
+            </p>
+            <p>
+              We're caught up to where I am in the project currently. The next step is in learning how to program shaders 
+              using GLSL, and the eventual goal of this project is to render a 3D object with some sort of user 
+              interactivity. I'd like to push it even further and get into game engine territory, with a full demo 
+              to showcase. If you've read this far, thank you! My future posts will probably be more concise and 
+              focused around updates that I make to the project, but for now I have a foundation to build on.
+            </p>
+          </div>
+        </section>
+    </main>
+    <footer>
+      <p>
+        &copy; 2026 Justin Tulip. Atlanta, GA. &#9993;:
+        <a href="mailto:justintulip@gmail.com">justintulip@gmail.com</a>
+      </p>
+    </footer>
+  </body>
+</html>
